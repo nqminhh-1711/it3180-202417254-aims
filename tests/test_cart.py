@@ -20,5 +20,14 @@ class TestCart(unittest.TestCase):
         self.cart.add_digital_video_disc(dvd2)
         self.assertEqual(self.cart.total_cost(), 30.0)
 
+    def test_total_cost_with_discount(self):
+        dvd = DigitalVideoDisc("DVD 1", cost=100.0)
+        self.cart.add_digital_video_disc(dvd)
+        self.assertEqual(self.cart.total_cost_with_discount(20), 80.0)
+
+    def test_total_cost_with_discount_invalid_percent(self):
+        with self.assertRaises(ValueError):
+            self.cart.total_cost_with_discount(150)
+
 if __name__ == "__main__":
     unittest.main()
