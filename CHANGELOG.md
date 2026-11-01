@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cart.sort_by_title() and Cart.sort_by_cost() to sort items in cart.
 - search_by_category() in aims.search to search DVDs by category.
 
+## [1.0.1] - 2026-11-02
+### Fixed
+- Make search_by_title case-insensitive (Fixes #20).
+
 ## [1.0.0] - 2026-11-01
 ### Added
 - Cart.print_cart() for displaying ordered items and total cost.
