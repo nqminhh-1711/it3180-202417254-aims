@@ -4,10 +4,11 @@ class Cart:
     def __init__(self):
         self.items = []
 
-    def add_digital_video_disc(self, disc):
+    def add_digital_video_disc(self, dvd):
         if len(self.items) >= self.MAX_NUMBERS_ORDERED:
             return False
-        self.items.append(disc)
+        self.items.append(dvd)
+        print(f"The disc '{dvd.title}' has been added")
         return True
 
     def total_cost(self):
