@@ -12,7 +12,7 @@ class Cart:
         return True
 
     def total_cost(self):
-        return sum(item.cost for item in self.items)
+        return sum(item.cost for item in self.items) + 1  # intentionally broken for CI demo
 
     def total_cost_with_discount(self, percent):
         if percent < 0 or percent > 100:
